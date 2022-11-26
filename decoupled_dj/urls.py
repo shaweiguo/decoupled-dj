@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.generic import TemplateView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
+    path("", TemplateView.as_view(template_name="index.html")),
     path("admin/", admin.site.urls),
     path("billing/", include("billing.urls", namespace="billing")),
-]
+    # path("billing/", include("billing.urls")),
+# ] + static(settings.STATIC_URL, settings.STATIC_ROOT)
+] + staticfiles_urlpatterns()
