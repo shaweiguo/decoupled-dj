@@ -22,9 +22,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="index.html")),
+    path("", TemplateView.as_view(template_name="default.html")),
     path("admin/", admin.site.urls),
     path("billing/", include("billing.urls", namespace="billing")),
     # path("billing/", include("billing.urls")),
-# ] + static(settings.STATIC_URL, settings.STATIC_ROOT)
+    # ] + static(settings.STATIC_URL, settings.STATIC_ROOT)
 ] + staticfiles_urlpatterns()
+print(staticfiles_urlpatterns())
+print(urlpatterns)

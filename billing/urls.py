@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+# from django.views.generic import TemplateView
 from . import views
 # from .views import Index
 
@@ -7,7 +7,7 @@ from . import views
 app_name = "billing"
 
 urlpatterns = [
-    # path("", Index.as_view(), name="index")
-    path("", TemplateView.as_view(template_name="billing/index.html"))
+    path("", views.Index.as_view(), name="index")
+    # path("", TemplateView.as_view(template_name="billing/index.html"))
     # path('', views.index, name='index'),
 ]
