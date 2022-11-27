@@ -16,7 +16,12 @@ class Invoice(models.Model):
 
 
 class ItemLine(models.Model):
-    invoice = models.ForeignKey(to=Invoice, on_delete=models.PROTECT)
+    invoice = models.ForeignKey(
+        to=Invoice,
+        on_delete=models.PROTECT,
+        related_name="items"
+    )
+    description = models.TextField()
     quantity = models.IntegerField()
     description = models.CharField(max_length=500)
     price = models.DecimalField(max_digits=8, decimal_places=2)

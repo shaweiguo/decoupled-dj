@@ -1,4 +1,19 @@
 {
     "editor.tabCompletion": "on",
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": false, // required
+    "editor.formatOnType": false, // required
+    "editor.formatOnSave": false, // optional
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "off",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:decoupled-dj}/db.sqlite3",
+            "name": "decoupled-dj"
+        }
+    ] // optional but recommended
 }

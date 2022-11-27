@@ -28,5 +28,5 @@ urlpatterns = [
     # path("billing/", include("billing.urls")),
     # ] + static(settings.STATIC_URL, settings.STATIC_ROOT)
 ] + staticfiles_urlpatterns()
-print(staticfiles_urlpatterns())
-print(urlpatterns)
+# print(staticfiles_urlpatterns())
+# print(urlpatterns)

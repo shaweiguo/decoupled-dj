@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "rest_framework.authtoken",
     "user.apps.UserConfig",
     "billing.apps.BillingConfig",
 ]
@@ -140,7 +142,7 @@ USE_TZ = True
 STATIC_URL = env('STATIC_URL')
 # Location of static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # print(STATIC_URL)
 # print(STATICFILES_DIRS)
 # print(STATIC_ROOT)
