@@ -338,3 +338,4 @@ cython_debug/
 **/__pycache__
 static/
 template/
+**/*.lock
